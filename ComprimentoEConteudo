@@ -15,10 +15,15 @@ int main()
     printf("\nInsira o segundo texto:");
     fgets(frase2, sizeof(frase2), stdin);
     
-    printf("\ncomprimento da frase 1:%d", strlen(frase1));
+    
+    printf("\nConteudo:%s", frase1);
+    printf("\nConteudo 2:%s", frase2);
+    
+    printf("\nComprimento da frase 1:%d", strlen(frase1));
     printf("\nComprimento da frase 2:%d", strlen(frase2));
     
     comp= strlen(frase1) - strlen(frase2);
+    
     if(comp==0)
     {
         printf("\nPossuem o mesmo comprimento!");
