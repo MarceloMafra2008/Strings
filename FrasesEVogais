@@ -1,0 +1,55 @@
+//	Conta espaços e vogais. Dado uma string com uma frase informada pelo usuário (incluindo espaços em branco), conte:
+//•	quantos espaços em branco existem na frase.
+//•	quantas vezes aparecem as vogais a, e, i, o, u.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char texto[50];
+    int i, cont=0, cont2=0, qtd_v=0;
+    
+    
+    printf("\nInsira uma frase:");
+    fgets(texto, sizeof(texto), stdin);
+    
+    for(i=0; texto[i] != '\0'; i++)
+    {
+        if(texto[i] == ' ')
+        {
+            cont ++;
+            cont2 = cont + 1;
+        }
+    }
+    printf("\nQUANTIDADE DE BRANCOS E PALAVRAS:");
+    
+    printf("\nQantidade de brancos:%d", cont);
+    printf("\nQuantidade de palavras:%d", cont2);
+    
+    printf("\n-------------------------------------------------------");
+    
+    
+    for(i=0;texto[i]!='\0'; i++)
+    {
+        char c = texto[i];
+        
+        if(c == 'a'|| c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c== 'E' ||c== 'I' || c == 'O' || c == 'U')
+        {
+            qtd_v ++;
+        }
+    }
+    
+    printf("\n");
+    printf("\nTOTAL VOGAL:");
+    if(qtd_v >0 )
+    {
+        printf("\nTotal de vogais:%d", qtd_v);
+    }
+    else
+    {
+        printf("\nNao possui nenhuma vogal!");
+    }
+    printf("\n---------------------------------------------------------------------------------");
+    
+}
