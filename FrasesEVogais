@@ -18,8 +18,8 @@ int main()
     {
         if(texto[i] == ' ')
         {
-            cont ++;
-            cont2 = cont + 1;
+            cont ++; // conta branco!
+            cont2 = cont + 1; //conta palavra OBS: se for uma unica palavra entao incialize o contador com 1, como estou usando frase segui outra logica!
         }
     }
     printf("\nQUANTIDADE DE BRANCOS E PALAVRAS:");
