@@ -1,0 +1,26 @@
+//	Nome ao contrário em maiúsculas. Faça um programa que permita ao usuário digitar
+//o seu nome e em seguida mostre o nome do usuário de trás para frente 
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char nome[50], i, comp[50];
+    int tam;
+    
+    printf("\nInsira o seu nome:");
+    fgets(nome, sizeof(nome), stdin);
+    
+    printf("\nSeu nome:%s", nome);
+    printf("\nComprimento do seu nome:%d", strlen(nome));
+    
+    tam= strlen(nome);
+    
+    printf("\n");
+    for(i=tam-1;i<strlen(nome);i--) // tam = mafra 
+    {
+        printf("%c", nome[i]);
+    }
+    
+}
