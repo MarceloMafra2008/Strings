@@ -1,0 +1,46 @@
+//1)	Tamanho de strings. Faça um programa que leia 2 strings e informe o 
+//conteúdo delas seguido do seu comprimento. Informe também se as duas strings possuem
+//o mesmo comprimento e são iguais ou diferentes no conteúdo.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[50], str2[50];
+    
+    printf("\nINFORMACOES:");
+    printf("\nInsira um texto:");
+    fgets(str1, sizeof(str1), stdin);
+    
+    printf("\nInsira outro texto:");
+    fgets(str2, sizeof(str2), stdin);
+   printf("\n------------------------------------------------------------------------------------------------") ;
+   printf("\nCONTEUDOS E COMPRIMENTO:");
+   
+    printf("\nConteudo do texto 1:%s", str1);
+    printf("\nConteudo do texto 2:%s", str2);
+    
+    printf("\nComprimento do texto 1:%d", strlen(str1));
+    printf("\nComprimento do texto 2:%d", strlen(str2));
+    printf("\n");
+    printf("\nVERIFICACAO:");
+    if(strcmp(str1,str2) == 0)
+    {
+        printf("\nPossuem o mesmo conteudo!");
+    }
+    else
+    {
+        printf("\nNao possuem o mesmo conteudo!");
+    }
+    
+    if(strlen(str1) - strlen(str2) == 0)
+    {
+        printf("\nPossuem o mesmo comprimento!");
+    }
+    else
+    {
+        printf("\nNao possuem o mesmo comrpimento!");
+    }
+    printf("\n-----------------------------------------------------------------------------------------");
+}
