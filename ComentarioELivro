@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[40], sc[10], str3[10], str2[10], strnulo[10];
+    int i, cont=0, cont2=0, qtd_l=0, comentarios=0, comp=0;
+
+    strcpy(str2,"sair");
+    strcpy(str3,"livro");
+    
+    strcpy(strnulo,"\n");
+    
+    strcat(str2,strnulo);
+    strcat(str3,strnulo);
+    
+    printf("\nInsira um comentario:");
+    fgets(str1, sizeof(str1), stdin);
+    
+    
+    
+    
+    while( strcmp(str1,str2) !=0 )
+    {
+        cont = 0;
+        
+        printf("Total de caracteres contando os espaços:%d", strlen(str1));
+        
+        for(i=0; str1[i] != '\0'; i ++) //"\0" é o nulo da ultima posição da string
+        {
+            if(str1[i] == ' ')
+            {
+               cont ++; //contador de espaços
+            }
+        }
+        cont2 = cont + 1; // contador de palavras
+        printf("\nTotal de caracteres descontando os espaços:%d", strlen(str1)-cont - 1);
+        
+        printf("\nQuantidade de brancos:%d", cont);
+        printf("\nQuantidade de palavras:%d", cont2);
+        
+        
+        if(char *sc=strstr(str1,str3); //char *sc=strstr(str1,str3) e if(sc!=0) é utilizado pra procurar a palavra livro(no str3) dentro do str1)
+        {
+            printf("\nTem palavra livro");
+            qtd_l ++;//pra contar a quantidade de frases com livro
+        }
+        else
+        {
+            printf("\nNao tem palavra livro");
+        }
+        comentarios ++;//pra contar a quantidade de comentarios
+        
+        printf("\n\nInsira um comentario:");
+        fgets(str1, sizeof(str1), stdin);
+    }
+    printf("\nTotal de comentarios:%d", comentarios);
+    printf("\nTotal de frases com livro:%d", qtd_l);
+    
+}
