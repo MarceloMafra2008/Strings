@@ -1,0 +1,52 @@
+//Crie um programa que chama uma  função que recebe três valores (a,b e c), 
+//que são os coeficientes de uma equação do segundo grau e retorne o valor do delta, que é dado por
+//'b² - 4ac'
+
+#include <stdio.h>
+#include <math.h>
+
+int scan()
+{
+    int val;
+    scanf("%d", &val);
+    return val;
+}
+
+int delta(int a, int b, int c)
+{
+    int result;
+    
+    result = pow(b, 2) - 4*a*c;
+    
+    return result;
+}
+void carac()
+{
+    int i;
+    
+    for(i=0;i<20; i++)
+    {
+        printf("-");
+        printf("+");
+    }
+}
+
+int main()
+{
+    int a, b, c;
+    int total;
+    
+    printf("\nInsira o valor de a:");
+    a = scan();
+    carac();
+    
+    printf("\nInsira o valor de b:");
+    b = scan();
+    carac();
+    printf("\nInsira o valor de c:");
+    c = scan();
+    carac();
+    
+    total = delta(a, b, c);
+    printf("\nResultado Delta:%d", total);
+}
