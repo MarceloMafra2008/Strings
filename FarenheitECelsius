@@ -1,0 +1,70 @@
+//Crie um aplicativo de conversão entre as temperaturas Celsius e Farenheit.
+//Primeiro o usuário deve escolher se vai entrar com a temperatura em Célsius ou Farenheit,
+//depois a conversão escolhida é realizada através de um comando SWITCH.
+//Se C é a temperatura em Célsius e F em farenheit, as fórmulas de conversão são:
+//C= 5.(F-32)/9
+//F= (9.C/5) + 32
+
+#include <stdio.h>
+float scan()
+{
+    float val;
+    scanf("%f", &val);
+    return val;
+}
+float conve(int temp)
+{
+    float graus;
+    float c, f;
+    
+    switch(temp)
+    {
+        case 1: printf("\nInsira o valor dos graus em CELSIUS:");
+                scanf("%f", &c);
+               
+                graus = (9 * c / 5) + 32;
+                break;
+                
+        
+        case 2: printf("\nInsira o valor dos graus em FARENHEIT");
+                scanf("%f", &f);
+                
+                graus = 5 * ( f - 32 ) / 9;
+                break;
+        
+    }
+    return graus;
+}
+void carac()
+{
+    int i;
+    for(i=0; i<35; i++)
+    {
+        printf("-");
+        printf("+");
+    }
+}
+
+int main()
+{
+    float resul,temp;
+    
+    printf("\n|INSIRA 1| para CELSIUS!");
+    printf("\n|INSIRA 2| para FARENHEIT!");
+    printf("\nEscolha o tipo de temperatura, Farenheit ou Celsius:");
+    temp = scan();
+    carac();
+    
+    while(temp<1 || temp>2)
+    {
+        printf("\nINSIRA NOVAMENTE! VALOR INCORRETO");
+        printf("\n|INSIRA 1| para CELSIUS!");
+        printf("\n|INSIRA 2| para FARENHEIT!");
+        printf("\nEscolha o tipo de temperatura, Farenheit ou Celsius:");
+        temp = scan();
+    }
+    carac();
+    resul = conve(temp);
+    carac();
+    printf("\nResultado da conversao:%.2f", resul);
+}
